@@ -124,3 +124,13 @@ Route::resource('brand', 'BrandController');
 
    Route::get('/sendemail', 'SendEmailController@index');
    Route::post('/sendemail/send', 'SendEmailController@send');
+
+
+   Route::get('/admin/show/users_details', 'CustomerController@show')->name('show.cusromers.deatils');
+
+
+   //CalculationController
+
+   Route::get('/user/calculation','CalculationContrtoller@index')->name('calculation.index');
+//    Route::method(['get','post'],'/user/calculation/add','CalculationContrtoller@add')->name('calculation.add');
+

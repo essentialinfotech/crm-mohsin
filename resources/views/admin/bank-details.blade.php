@@ -114,28 +114,28 @@
 													<div class="form-group row">
 														<label class="col-form-label text-right col-lg-3 col-sm-12">Company Name *</label>
 														<div class="col-lg-9 col-md-9 col-sm-12">
-															<input type="text" class="form-control" name="name" />
+															<input type="text" class="form-control" name="name" value=""/>
 															
 														</div>
 													</div>
 													<div class="form-group row">
 														<label class="col-form-label text-right col-lg-3 col-sm-12">Account Name *</label>
 														<div class="col-lg-9 col-md-9 col-sm-12">
-															<input type="text" class="form-control" name="account_name"  />
+															<input type="text" class="form-control" name="account_name" value=""  />
 															
 														</div>
 													</div>
 													<div class="form-group row">
 														<label class="col-form-label text-right col-lg-3 col-sm-12">Account Number *</label>
 														<div class="col-lg-9 col-md-9 col-sm-12">
-															<input type="text" class="form-control" name="account"  />
+															<input type="text" class="form-control" name="account" value=""   />
 															
 														</div>
 													</div>
 													<div class="form-group row">
 														<label class="col-form-label text-right col-lg-3 col-sm-12">Bank Name *</label>
 														<div class="col-lg-9 col-md-9 col-sm-12">
-															<input type="text" class="form-control" name="b_name"  />
+															<input type="text" class="form-control" name="b_name" value=""   />
 															
 														</div>
 													</div>
@@ -147,7 +147,7 @@
 												<div class="card-footer">
 													<div class="row">
 														<div class="col-lg-9 ml-lg-auto">
-															<button type="submit" class="btn btn-primary font-weight-bold mr-2" name="submitButton">Validate</button>
+															<button type="submit" class="btn btn-primary font-weight-bold mr-2" name="submitButton">Add Account</button>
 															
 														</div>
 													</div>
