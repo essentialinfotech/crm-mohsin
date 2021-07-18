@@ -32,7 +32,7 @@
 									<div class="card-header flex-wrap border-0 pt-6 pb-0">
 										<div class="card-title">
 											<!-- <h3 class="card-label">
-											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">{{trans("file.Add Category")}}</button></h3> -->
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">{{trans("file.Add user")}}</button></h3> -->
 										</div>
 										<div class="card-toolbar">
 											<!--begin::Dropdown-->
@@ -124,30 +124,43 @@
 												    <th class="not-exported"></th>
 								                    <th>First Name</th>
 								                    <th>Last Name</th>
-								                    <th>{{trans('file.Parent Category')}}</th>
-								                    <th>{{trans('file.Number of Product')}}</th>
-								                    <th>{{trans('file.Stock Quantity')}}</th>
-								                    <th>{{trans('file.Stock Worth (Price/Cost)')}}</th>
+								                    <th>Email</th>
+								                    <th>Address</th>
+								                    <th>Phone number</th>
+													<th>Area</th>
+								                    <th>Cost of goods</th>
+								                    <th>Travel Cost</th>
+													<th>Epmloyee Cost</th>
+								                    <th>Discount</th>
+								                    
+													<th>Profit</th>
 								                     <th class="not-exported">{{trans('file.status')}}</th>
 
 								                    <th class="not-exported">{{trans('file.action')}}</th>
 												</tr>
 											</thead>
 											<tbody>
-											@foreach($bankDetails as $category)
+											@foreach($users as $user)
 												<tr>
 													<td>{{$loop->index+1}}</td>
-													<td></td>
-													<td>{{$category->name}}</td>
-													<td>São Félix do Xingu</td>
-													<td>698 Oriole Pass</td>
-													<td>Hayes Boule</td>
-													<td>Casper-Kerluke</td>
-													<td>	<input type="checkbox" {{$category->status=='active'? 'checked':''}} id="categoryStatus" data-id="{{$category->id}}" data-toggle="toggle" data-style="ios" data-on="Active" data-off="Inactive" data-offStyle="danger" data-onStyle="success"></td>
+											
+													<td>{{$user->first_name}}</td>
+													<td>{{$user->last_name}}</td>
+													<td>{{$user->email}}</td>
+													<td>{{$user->address}}</td>
+													<td>{{$user->phone_number }}</td>
+													<td>{{$user->area}}</td>
+													<td>{{$user->goods}}</td>
+													<td>{{$user->travel_cost}}</td>
+													<td>{{$user->employee_cost}}</td>
+													<td>{{$user->discount}}</td>
+													<td>{{$user->profit}}</td>
+													<td>	<input type="checkbox" {{$user->status=='active'? 'checked':''}} id="userStatus" data-id="{{$user->id}}" data-toggle="toggle" data-style="ios" data-on="Active" data-off="Inactive" data-offStyle="danger" data-onStyle="success"></td>
 													<td>	<div class="dropdown">
                               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                <a href="" class=" dropdown-item "> Edit</a>
+							   <a href="" class=" dropdown-item "> Invoice</a>
 							   
 								<a href="javascript:void(0)" class="confirmDelete  dropdown-item" record="product" recordid="">Delete</a>
 

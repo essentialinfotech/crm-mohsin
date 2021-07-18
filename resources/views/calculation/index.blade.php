@@ -18,71 +18,45 @@
 											
 											</div>
 											<!--begin::Form-->
-											<form class="form" method="post" action="">
+											<form class="form" method="post" action="{{route('calculation.add')}}">
+												@csrf
 												<div class="card-body">
 													<div class="form-group row">
+													<div class="col-lg-6">
+															<label>Enter Your area:</label>
+															<input type="text" name="area" class="form-control" placeholder="Enter Your area" />
+														
+														</div>
 														<div class="col-lg-6">
 															<label>Cost of goods:</label>
-															<input type="number" class="form-control" placeholder="Enter full name" />
+															<input type="number" name="goods" class="form-control" placeholder="Enter Youyr Cost of goods" />
 														
 														</div>
 														<div class="col-lg-6">
 															<label>Discount:</label>
-															<input type="email" class="form-control" placeholder="Enter contact number" />
+															<input type="number" name="discount" class="form-control" placeholder="Enter Your Discount" />
 															
 														</div>
-													</div>
-                                                    <div class="form-group row">
 														<div class="col-lg-6">
 															<label>Travel Coset:</label>
-															<input type="email" class="form-control" placeholder="Enter full name" />
+															<input type="number" name="travel_cost" class="form-control" placeholder="Enter Your Travel Cost" />
 														
 														</div>
 														<div class="col-lg-6">
 															<label>Epmloyee Costs:</label>
-															<input type="email" class="form-control" placeholder="Enter contact number" />
+															<input type="number" name="employee_cost" class="form-control" placeholder="Enter Your Employee Cost" />
 															
 														</div>
-													</div>
-                                                    <div class="form-group row">
+
 														<div class="col-lg-6">
 															<label>Profite:</label>
-															<input type="email" class="form-control" placeholder="Enter full name" />
+															<input type="number" name="profite" class="form-control" placeholder="Enter your Profit" />
 														
 														</div>
-														
 													</div>
+                                                 
 
-                                                    <div id="kt_repeater_1">
-												<div class="form-group row">
-												
-													<div data-repeater-list="" class="col-lg-10">
-														<div data-repeater-item="" class="form-group row align-items-center">
-															
-															<div class="col-md-6">
-																<label>Enter Value:</label>
-																<input type="number" class="form-control" placeholder="Enter Your Cost" />
-																<div class="d-md-none mb-2"></div>
-															</div>
-															
-															<div class="col-md-6">
-																<a href="javascript:;" data-repeater-delete="" class="btn btn-sm font-weight-bolder btn-light-danger">
-																<i class="la la-trash-o"></i>Delete</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-lg-2 col-form-label text-right"></label>
-													<div class="col-lg-4">
-														<a href="javascript:;" data-repeater-create="" class="btn btn-sm font-weight-bolder btn-light-primary">
-														<i class="la la-plus"></i>Add Field</a>
-													</div>
-												</div>
-											</div>
-												
-												
-													<!-- begin: Example Code-->
+                                    
 													
 													<!-- end: Example Code-->
 												</div>
@@ -99,7 +73,7 @@
 												</div>
 											</form>
 											<!--end::Form-->
-										</div>
+										</div> 
 										<!--end::Card-->
 										
 									</div>

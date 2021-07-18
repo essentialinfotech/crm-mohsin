@@ -132,5 +132,12 @@ Route::resource('brand', 'BrandController');
    //CalculationController
 
    Route::get('/user/calculation','CalculationContrtoller@index')->name('calculation.index');
-//    Route::method(['get','post'],'/user/calculation/add','CalculationContrtoller@add')->name('calculation.add');
+   Route::get('/user/calculation/show','CalculationContrtoller@show')->name('calculation.show');
+   Route::match(['get','post'],'/user/calculation/add','CalculationContrtoller@add')->name('calculation.add');
+
+   //Add Users Controller
+
+   Route::get('/users/add','UsersController@index')->name('users.index');
+   Route::get('/users/show','UsersController@show')->name('users.show');
+   Route::match(['get','post'],'/user/add/insert','UsersController@insert')->name('calculation.insert');
 

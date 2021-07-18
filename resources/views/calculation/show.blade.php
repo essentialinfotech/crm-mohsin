@@ -6,33 +6,18 @@
 							<div class="container">
 								
 														
-														
+														<!-- Modal-->
+													
 												
 													
 												
 
 								<!--begin::Dashboard-->
-								<!--begin::Row-->
-							 	<div class="row">
-									<div class="col-lg-12">
-										<!--begin::Card-->
-										<div class="card card-custom example example-compact">
-											
-											<!--begin::Form-->
-											
-											<!--end::Form-->
-										</div>
-										<!--end::Card-->
-									</div>
-								
-								<!--end::Dashboard-->
-							</div> 
-							<!--end::Container-->
-							<div class="card card-custom gutter-b">
+								<div class="card card-custom gutter-b">
 									<div class="card-header flex-wrap border-0 pt-6 pb-0">
 										<div class="card-title">
-											<!-- <h3 class="card-label">
-											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">{{trans("file.Add Category")}}</button></h3> -->
+											<h3 class="card-label">
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add calculation</button></h3>
 										</div>
 										<div class="card-toolbar">
 											<!--begin::Dropdown-->
@@ -122,28 +107,30 @@
 											<thead>
 												<tr>
 												    <th class="not-exported"></th>
-								                    <th>First Name</th>
-								                    <th>Last Name</th>
-								                    <th>{{trans('file.Parent Category')}}</th>
-								                    <th>{{trans('file.Number of Product')}}</th>
-								                    <th>{{trans('file.Stock Quantity')}}</th>
-								                    <th>{{trans('file.Stock Worth (Price/Cost)')}}</th>
-								                     <th class="not-exported">{{trans('file.status')}}</th>
+								                    <th>Area</th>
+								                    <th>Costs Of goods</th>
+								                
+								                     <th class="not-exported">Discount</th>
 
-								                    <th class="not-exported">{{trans('file.action')}}</th>
+								                    <th class="not-exported">Travel Cost</th>
+                                                    <th class="not-exported">Employee Cost</th>
+                                                    <th class="not-exported">Profit</th>
+                                                    <th class="not-exported">Status</th>
+                                                    <th class="not-exported">Action</th>
 												</tr>
 											</thead>
 											<tbody>
-											@foreach($bankDetails as $category)
+												@foreach($calculations as $calculation)
 												<tr>
 													<td>{{$loop->index+1}}</td>
-													<td></td>
-													<td>{{$category->name}}</td>
-													<td>São Félix do Xingu</td>
-													<td>698 Oriole Pass</td>
-													<td>Hayes Boule</td>
-													<td>Casper-Kerluke</td>
-													<td>	<input type="checkbox" {{$category->status=='active'? 'checked':''}} id="categoryStatus" data-id="{{$category->id}}" data-toggle="toggle" data-style="ios" data-on="Active" data-off="Inactive" data-offStyle="danger" data-onStyle="success"></td>
+												
+													<td>{{$calculation->area}}</td>
+                                                    <td>{{$calculation->goods}}</td>
+                                                    <td>{{$calculation->discount}}</td>
+                                                    <td>{{$calculation->travel_cost}}</td>
+                                                    <td>{{$calculation->employee_cost}}</td>
+                                                    <td>{{$calculation->profit}}</td>
+													<td>	<input type="checkbox" {{$calculation->status=='active'? 'checked':''}} id="calculationStatus" data-id="{{$calculation->id}}" data-toggle="toggle" data-style="ios" data-on="Active" data-off="Inactive" data-offStyle="danger" data-onStyle="success"></td>
 													<td>	<div class="dropdown">
                               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -156,13 +143,14 @@
 												
 												</tr>
 												@endforeach
-											
-												
 											</tbody>
 										</table>
 										<!--end: Datatable-->
 									</div>
 								</div>
+								
+								<!--end::Dashboard-->
+							</div>
+							<!--end::Container-->
 						</div>
-					</div>
 @endsection
