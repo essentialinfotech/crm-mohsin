@@ -15,6 +15,13 @@
 										<div class="card card-custom gutter-b example example-compact">
 											<div class="card-header">
 												<h3 class="card-title">Add Calculation</h3>
+												<button
+										data-design-type="Poster"
+										data-api-key="API KEY GOES HERE"
+										class="canva-design-button"
+										style="display: none;"
+										>Design on Canva</button>
+
 											
 											</div>
 											<!--begin::Form-->
@@ -83,4 +90,6 @@
 						</div>
 						<!--end::Entry-->
 					</div>
+
+					
 @endsection

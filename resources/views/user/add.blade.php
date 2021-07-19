@@ -135,5 +135,15 @@
 						</div>
 						<!--end::Entry-->
 					</div>
-                   
+                   <script>
+
+$('.product').change(function(){
+    var selected = $('option:selected', this);
+    // this should now output the correct product name and its rate.
+    console.log(selected.attr('value'),  selected.data('rate') );
+
+    // now to add it to rate field within this TR
+    $(this).parent().parent().find('.rate').val( selected.data('rate') )
+});
+					   </script>
 @endsection

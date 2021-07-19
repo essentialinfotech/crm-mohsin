@@ -40,4 +40,9 @@ class UsersController extends Controller
        $users=User::get();
        return view('user.show',compact('users'));
    }
+   public function invoice($id)
+   {
+       $users = User::where('id',$id)->first();
+     return view('user.invoice',compact('users'));
+   }
 }

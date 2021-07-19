@@ -140,4 +140,5 @@ Route::resource('brand', 'BrandController');
    Route::get('/users/add','UsersController@index')->name('users.index');
    Route::get('/users/show','UsersController@show')->name('users.show');
    Route::match(['get','post'],'/user/add/insert','UsersController@insert')->name('calculation.insert');
+   Route::get('/users/invoice/{id}','UsersController@invoice')->name('users.invoice.show');
 

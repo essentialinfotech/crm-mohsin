@@ -16,12 +16,7 @@
 							 	<div class="row">
 									<div class="col-lg-12">
 										<!--begin::Card-->
-										<div class="card card-custom example example-compact">
-											
-											<!--begin::Form-->
-											
-											<!--end::Form-->
-										</div>
+										
 										<!--end::Card-->
 									</div>
 								
@@ -155,17 +150,144 @@
 													<td>{{$user->employee_cost}}</td>
 													<td>{{$user->discount}}</td>
 													<td>{{$user->profit}}</td>
-													<td>	<input type="checkbox" {{$user->status=='active'? 'checked':''}} id="userStatus" data-id="{{$user->id}}" data-toggle="toggle" data-style="ios" data-on="Active" data-off="Inactive" data-offStyle="danger" data-onStyle="success"></td>
+													<td>	<input type="checkbox" {{$user->status=='active'? 'checked':''}} id="userStatus" data-height="15" data-width="90" data-id="{{$user->id}}" data-toggle="toggle" data-style="ios" data-on="Active" data-off="Inactive" data-offStyle="danger" data-size="mini" data-onStyle="success"></td>
 													<td>	<div class="dropdown">
-                              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
-                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                               <a href="" class=" dropdown-item "> Edit</a>
-							   <a href="" class=" dropdown-item "> Invoice</a>
-							   
-								<a href="javascript:void(0)" class="confirmDelete  dropdown-item" record="product" recordid="">Delete</a>
+													<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton heiwt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:30px;weidht:100px">Action</button>
+													<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+													<a href="" class=" dropdown-item "> Edit</a>
+													<a href="" class=" dropdown-item "> Invoice</a>
+													<a  href="{{route('users.invoice.show',$user->id)}}"  class=" dropdown-item" >View Details</a>
+													
+														<a href="javascript:void(0)" class="confirmDelete  dropdown-item dropdown-item" record="product" recordid="">Delete</a>
 
-                             </div>
-                             </div></td>
+
+													
+
+													</div>
+													</div>
+							
+							
+							                        <div class="modal fade" id="exampleModalSizeLg{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalSizeLg" aria-hidden="true">
+															<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																	<button id="print-btn" type="button" class="btn btn-default btn-sm d-print-none"><i class="dripicons-print"></i> {{trans('file.Print')}}</button>
+																	<button onclick="window.print();" class="btn btn-primary"><i class="dripicons-print"></i> {{trans('file.Print')}}</button>
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<i aria-hidden="true" class="ki ki-close"></i>
+																		</button>
+																	</div>
+																	<div class="modal-body">
+																	<div class="container">
+																<div class="row">
+																	<div class="col">
+																	First Name
+																	</div>
+																	<div class="col">
+																	{{$user->first_name}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Last Name
+																	</div>
+																	<div class="col">
+																	{{$user->last_name}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Email
+																	</div>
+																	<div class="col">
+																	{{$user->email}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																Phone Number
+																	</div>
+																	<div class="col">
+																	{{$user->phone_number}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																Address
+																	</div>
+																	<div class="col">
+																	{{$user->address}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Company Name
+																	</div>
+																	<div class="col">
+																	{{$user->company_name}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Area
+																	</div>
+																	<div class="col">
+																	{{$user->area}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Cost of Goods
+																	</div>
+																	<div class="col">
+																	{{$user->goods}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Travel Cost
+																	</div>
+																	<div class="col">
+																	{{$user->travel_cost}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Employee Cost
+																	</div>
+																	<div class="col">
+																	{{$user->employee_cost}}
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col">
+																	Profit
+																	</div>
+																	<div class="col">
+																	{{$user->profite}}
+																	</div>
+																</div>
+
+																
+																</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+																		<button type="button" class="btn btn-primary font-weight-bold">Save changes</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+							
+							
+							
+							
+							
+															</td>
+
+
+
+
+							
 												
 												</tr>
 												@endforeach
@@ -178,4 +300,5 @@
 								</div>
 						</div>
 					</div>
+				
 @endsection

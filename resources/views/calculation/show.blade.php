@@ -17,7 +17,17 @@
 									<div class="card-header flex-wrap border-0 pt-6 pb-0">
 										<div class="card-title">
 											<h3 class="card-label">
-											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add calculation</button></h3>
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add calculation</button>
+											
+										
+										</h3>
+										<button
+													data-design-type="Poster"
+													data-api-key="https://www.canva.com/brand/join?token=aRGR6fAfsQ-I_A4i1ypM7A&referrer=team-invite"
+													class="canva-design-button"
+													style="display: none;"
+													>Design on Canva</button
+													>
 										</div>
 										<div class="card-toolbar">
 											<!--begin::Dropdown-->
@@ -129,7 +139,7 @@
                                                     <td>{{$calculation->discount}}</td>
                                                     <td>{{$calculation->travel_cost}}</td>
                                                     <td>{{$calculation->employee_cost}}</td>
-                                                    <td>{{$calculation->profit}}</td>
+                                                    <td>{{$calculation->profite}}</td>
 													<td>	<input type="checkbox" {{$calculation->status=='active'? 'checked':''}} id="calculationStatus" data-id="{{$calculation->id}}" data-toggle="toggle" data-style="ios" data-on="Active" data-off="Inactive" data-offStyle="danger" data-onStyle="success"></td>
 													<td>	<div class="dropdown">
                               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
@@ -153,4 +163,6 @@
 							</div>
 							<!--end::Container-->
 						</div>
+
+				
 @endsection

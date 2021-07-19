@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Auth;
 use Image;
+use Session;
 
 class AdminController extends Controller
 {
@@ -23,7 +24,7 @@ class AdminController extends Controller
    public function logout()
    {
 
-     Auth::logout();
+    Session::flush();
      return redirect('/');
     
    }
